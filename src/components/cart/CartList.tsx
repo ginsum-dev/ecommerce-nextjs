@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import CartItem from "./CartItem";
-import CartPrice from "./CartPrice";
 import Button from "@/components/custom/Button";
-import useCart from "@/hooks/useCart";
+import useCart from "@/hooks/cart/useCart";
+import CartPrice from "./CartPrice";
+import CartItem from "./CartItem";
 
 export default function CartList() {
   const router = useRouter();

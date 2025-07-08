@@ -1,7 +1,7 @@
+import Image from "next/image";
 import { ProductType } from "@/types/productTypes";
 import { CartType, useCartStore } from "@/store/cartStore";
 
-import Image from "next/image";
 import cartIcon from "@/assets/icons/cart-icon.svg";
 import QuantityButton from "../custom/QuantityButton";
 

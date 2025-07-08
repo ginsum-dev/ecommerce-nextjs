@@ -1,5 +1,5 @@
-import ProductItem from "./ProductItem";
 import { ProductType } from "@/types/productTypes";
+import ProductItem from "./ProductItem";
 
 export default function ProductList({ products }: { products: ProductType[] }) {
   return (

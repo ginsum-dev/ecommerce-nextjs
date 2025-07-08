@@ -1,5 +1,5 @@
-import { CartType } from '@/store/cartStore';
-import { useOrderStore } from '@/store/orderStore';
+import { CartType } from "@/store/cartStore";
+import { useOrderStore } from "@/store/orderStore";
 
 export default function CartPrice() {
   const orderItems = useOrderStore((state) => state.orderItems);

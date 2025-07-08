@@ -1,5 +1,5 @@
-import Button from "@/components/custom/Button";
 import { useRef } from "react";
+import Button from "@/components/custom/Button";
 
 export default function ProductSearch({
   setSearch,

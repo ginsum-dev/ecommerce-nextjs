@@ -1,5 +1,5 @@
+import { ProductType } from "@/types/productTypes";
 import { useCartStore } from "@/store/cartStore";
-import { ProductType } from "@/features/product/productTypes";
 import { useOrderStore } from "@/store/orderStore";
 
 export default function QuantityButton({
