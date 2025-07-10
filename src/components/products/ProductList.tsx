@@ -1,7 +1,7 @@
-import { ProductType } from "@/types/productTypes";
+import { Product } from "@/queries/productQueries";
 import ProductItem from "./ProductItem";
 
-export default function ProductList({ products }: { products: ProductType[] }) {
+export default function ProductList({ products }: { products: Product[] }) {
   return (
     <ul className="flex flex-wrap gap-2">
       {products.map((product) => (

@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import arrowLeftIcon from '@/assets/icons/arrow-left-icon.svg';
+import Link from "next/link";
+import Image from "next/image";
+import ArrowLeftIcon from "@/assets/icons/arrow-left-icon.svg";
 
 export default function Header({
   children,
@@ -15,7 +15,7 @@ export default function Header({
         <div className="absolute left-5">
           <Link href={backPath}>
             <Image
-              src={arrowLeftIcon}
+              src={ArrowLeftIcon}
               alt="arrow-left"
               width={16}
               height={16}

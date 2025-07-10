@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { ProductType } from "@/types/productTypes";
+import { Product } from "@/queries/productQueries";
 import { CartType, useCartStore } from "@/store/cartStore";
 
 import cartIcon from "@/assets/icons/cart-icon.svg";
 import QuantityButton from "../custom/QuantityButton";
 
-export default function ProductItem({ product }: { product: ProductType }) {
+export default function ProductItem({ product }: { product: Product }) {
   const cartItems = useCartStore((state) => state.cartItems);
   const addToCart = useCartStore((state) => state.addToCart);
 
