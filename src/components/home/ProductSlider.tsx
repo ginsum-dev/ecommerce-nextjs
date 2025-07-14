@@ -8,7 +8,7 @@ import cartIcon from "@/assets/icons/cart-icon.svg";
 import QuantityButton from "../custom/QuantityButton";
 
 export default function ProductSlider() {
-  const { data: products, isLoading, isError } = useGetProducts();
+  const { data, isLoading, isError } = useGetProducts();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -16,6 +16,8 @@ export default function ProductSlider() {
   const cartItems = useCartStore((state) => state.cartItems);
   const addToCart = useCartStore((state) => state.addToCart);
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
+
+  const products = data?.slice(0, 6);
 
   // 자동 슬라이드 (5초마다)
   useEffect(() => {
@@ -116,6 +118,17 @@ export default function ProductSlider() {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
+      {/* 배경 이미지 */}
+      <div className="absolute inset-0">
+        <Image
+          src={currentProduct.image}
+          alt={currentProduct.name}
+          fill
+          className="object-cover opacity-20"
+          sizes="100vw"
+        />
+      </div>
+
       {/* 상품 정보 */}
       <div className="absolute inset-0 flex items-center justify-center p-8">
         <div className="text-center max-w-lg">

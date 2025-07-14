@@ -1,6 +1,8 @@
 import Header from "@/components/custom/Header";
 import Navbar from "@/components/custom/Navbar";
 import ProductSlider from "@/components/home/ProductSlider";
+import BestItem from "@/components/home/BestItem";
+import Footer from "@/components/custom/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <div className="w-[765px] mx-auto">
         <ProductSlider />
       </div>
+      <BestItem />
+      <Footer />
     </div>
   );
 }
