@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { ProductType } from "@/types/productTypes";
+import { Product } from "@/queries/productQueries";
 import { CartType, useCartStore } from "@/store/cartStore";
 
 import cartIcon from "@/assets/icons/cart-icon.svg";
 import QuantityButton from "../custom/QuantityButton";
 
-export default function ProductItem({ product }: { product: ProductType }) {
+export default function ProductItem({ product }: { product: Product }) {
   const cartItems = useCartStore((state) => state.cartItems);
   const addToCart = useCartStore((state) => state.addToCart);
 
@@ -13,7 +13,19 @@ export default function ProductItem({ product }: { product: ProductType }) {
     cartItems.find((item: CartType) => item.id === product.id)?.order || 0;
 
   return (
-    <li className="flex flex-col w-full sm:w-[49%] p-4 border border-gray-300 rounded-md gap-2">
+    <li className="flex flex-col w-full sm:w-[49%] p-4 border border-gray-300 rounded-md gap-3">
+      {/* 상품 이미지 */}
+      <div className="relative w-full h-48 bg-gray-100 rounded-md overflow-hidden">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 100vw, 50vw"
+        />
+      </div>
+
+      {/* 상품 정보 */}
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-semibold text-gray-900">{product.name}</h3>
         <span className="text-xl font-bold">{`${product.price.toLocaleString()}원`}</span>
