@@ -3,6 +3,7 @@ import Navbar from "@/components/custom/Navbar";
 import ProductSlider from "@/components/home/ProductSlider";
 import BestItem from "@/components/home/BestItem";
 import Footer from "@/components/custom/Footer";
+import Products from "@/components/home/Products";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <ProductSlider />
       </div>
       <BestItem />
+      <Products />
       <Footer />
     </div>
   );
