@@ -1,16 +1,20 @@
 "use client";
 
-import { useGetProducts } from "@/queries/productQueries";
-import ProductList from "../products/ProductList";
+import { useGetBestProducts } from "@/queries/productQueries";
+import ProductItem from "../products/ProductItem";
 
 export default function BestItem() {
-  const { data } = useGetProducts();
+  const { data } = useGetBestProducts();
   const products = data?.slice(0, 6) || [];
 
   return (
-    <div className="flex flex-col gap-3 py-10">
+    <div className="flex flex-col gap-3 py-10 ">
       <span className="text-2xl font-bold">Best Item</span>
-      <ProductList products={products} />
+      <ul className="flex flex-nowrap gap-2 overflow-x-auto">
+        {products.map((product) => (
+          <ProductItem key={product.id} product={product} />
+        ))}
+      </ul>
     </div>
   );
 }

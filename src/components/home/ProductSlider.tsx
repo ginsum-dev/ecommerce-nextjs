@@ -113,7 +113,7 @@ export default function ProductSlider() {
 
   return (
     <div
-      className="relative w-full max-w-6xl mx-auto h-80 sm:h-96 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg overflow-hidden cursor-grab active:cursor-grabbing shadow-lg"
+      className="relative w-full max-w-6xl mx-auto h-80 sm:h-96 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg overflow-hidden cursor-grab active:cursor-grabbing"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}

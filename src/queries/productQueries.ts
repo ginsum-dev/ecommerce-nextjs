@@ -29,3 +29,25 @@ export const useGetProducts = () => {
     retry: 3,
   });
 };
+
+export const getBestProducts = async (): Promise<Product[]> => {
+  try {
+    const response = await fetch("/api/best");
+    if (!response.ok) {
+      throw new Error("Failed to fetch best products");
+    }
+    return response.json();
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const useGetBestProducts = () => {
+  return useQuery({
+    queryKey: ["bestProducts"],
+    queryFn: getBestProducts,
+    staleTime: 5 * 60 * 1000, // 5분
+    gcTime: 10 * 60 * 1000, // 10분
+    retry: 3,
+  });
+};
