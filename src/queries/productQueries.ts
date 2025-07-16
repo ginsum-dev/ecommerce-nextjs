@@ -51,3 +51,32 @@ export const useGetBestProducts = () => {
     retry: 3,
   });
 };
+
+export interface MainProduct {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+}
+
+export const getMainProducts = async (): Promise<MainProduct[]> => {
+  try {
+    const response = await fetch("/api/main");
+    if (!response.ok) {
+      throw new Error("Failed to fetch main products");
+    }
+    return response.json();
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const useGetMainProducts = () => {
+  return useQuery({
+    queryKey: ["mainProducts"],
+    queryFn: getMainProducts,
+    staleTime: 5 * 60 * 1000, // 5분
+    gcTime: 10 * 60 * 1000, // 10분
+    retry: 3,
+  });
+};
