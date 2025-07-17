@@ -104,7 +104,7 @@ export default function ProductSlider() {
 
   return (
     <div
-      className="relative w-full max-w-6xl mx-auto h-80 sm:h-96 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg overflow-hidden cursor-grab active:cursor-grabbing"
+      className="relative w-full max-w-6xl mx-auto h-80 sm:h-96 bg-gradient-to-r from-blue-50 to-indigo-50 overflow-hidden cursor-grab active:cursor-grabbing"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -115,7 +115,7 @@ export default function ProductSlider() {
           src={currentProduct.image}
           alt={currentProduct.title}
           fill
-          className="object-cover opacity-80"
+          className="object-cover opacity-90"
           sizes="100vw"
         />
       </div>
