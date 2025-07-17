@@ -14,9 +14,10 @@ export default function Home() {
       <Navbar />
       <div className="w-[765px] mx-auto">
         <ProductSlider />
+        <BestItem />
+        <Products />
       </div>
-      <BestItem />
-      <Products />
+
       <Footer />
     </div>
   );
