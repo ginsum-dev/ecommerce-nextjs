@@ -3,35 +3,33 @@ import { NextResponse } from "next/server";
 const bestProducts = [
   // 전자제품
   {
-    id: 1,
+    id: 2,
     name: "사과",
     price: 89000,
     image:
       "https://images.unsplash.com/photo-1577028300036-aa112c18d109?q=80&w=1035&auto=format&fit=crop",
   },
   {
-    id: 2,
+    id: 4,
     name: "블루베리",
     price: 45000,
     image:
       "https://images.unsplash.com/photo-1425934398893-310a009a77f9?q=80&w=2000&auto=format&fit=crop",
   },
   {
-    id: 5,
+    id: 6,
     name: "딸기",
     price: 35000,
     image:
       "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    id: 7,
+    id: 8,
     name: "레몬",
     price: 89000,
     image:
       "https://images.unsplash.com/photo-1624436518795-a2c1c77d6896?q=80&w=1035&auto=format&fit=crop",
   },
-
-  // 홈/리빙
   {
     id: 10,
     name: "토마토",
@@ -40,7 +38,7 @@ const bestProducts = [
       "https://images.unsplash.com/photo-1582284540020-8acbe03f4924?q=80&w=1035&auto=format&fit=crop",
   },
   {
-    id: 11,
+    id: 12,
     name: "바나나",
     price: 18000,
     image:
