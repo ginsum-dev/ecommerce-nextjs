@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useGetPoints } from "@/api/pointQueries";
+import { useGetPoints } from "@/queries/pointQueries";
 import Button from "@/components/custom/Button";
 
 export default function OrderPoint({
