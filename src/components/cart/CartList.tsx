@@ -43,7 +43,7 @@ export default function CartList() {
         </ul>
       </div>
       <CartPrice />
-      <div className="fixed bottom-0 left-0 right-0 max-w-[620px] mx-auto w-full flex justify-center bg-white py-2">
+      <div className="fixed bottom-0 left-0 right-0 max-w-[500px] mx-auto w-full flex justify-center bg-white py-2">
         <Button
           className="w-[300px]"
           disabled={orderItems.length === 0}

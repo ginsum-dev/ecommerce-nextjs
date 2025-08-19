@@ -4,8 +4,8 @@ import OrderPrice from "@/components/order/OrderPrice";
 
 export default function OrderPage() {
   return (
-    <div className="flex flex-col gap-4">
-      <Header>
+    <div className="flex flex-col gap-4 min-h-screen">
+      <Header backPath="/cart">
         <h1 className="text-2xl font-bold">Order</h1>
       </Header>
       <OrderList />

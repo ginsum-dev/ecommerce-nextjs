@@ -36,7 +36,7 @@ export default function OrderPrice() {
         <span className="font-semibold">총 결제 금액</span>
         <span className="text-xl font-bold">{`${totalPayment.toLocaleString()}원`}</span>
       </div>
-      <div className="fixed bottom-0 left-0 right-0 max-w-[620px] mx-auto w-full flex justify-center bg-white py-2">
+      <div className="fixed bottom-0 left-0 right-0 max-w-[500px] mx-auto w-full flex justify-center bg-white py-2">
         <Button className="w-[300px]" onClick={handleClickPayment}>
           결제하기
         </Button>

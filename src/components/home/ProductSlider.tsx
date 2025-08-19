@@ -117,6 +117,7 @@ export default function ProductSlider() {
           fill
           className="object-cover opacity-96"
           sizes="100vw"
+          priority={true}
         />
       </div>
 

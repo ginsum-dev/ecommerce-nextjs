@@ -20,7 +20,7 @@ export default async function ProductDetailPage({
         <h1 className="text-2xl font-bold">상품 상세</h1>
       </Header>
       <Navbar />
-      <main className="w-[600px] mx-auto pb-20">
+      <main className="w-[600px] mx-auto min-h-screen pb-20">
         <ProductDetail productId={id} />
       </main>
       <Footer />

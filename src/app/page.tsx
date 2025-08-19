@@ -16,9 +16,8 @@ export default function Home() {
         <ProductSlider />
         <BestItem />
         <Products />
+        <Footer />
       </div>
-
-      <Footer />
     </div>
   );
 }
