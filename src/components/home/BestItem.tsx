@@ -9,7 +9,7 @@ export default function BestItem() {
 
   return (
     <div className="flex flex-col gap-2 py-8">
-      <h2 className="text-2xl font-bold text-gray-900">Best Items</h2>
+      <h2 className="text-2xl font-bold text-gray-900 px-5">Best Items</h2>
       <div className="w-full overflow-x-auto">
         <ul className="flex gap-2.5 pb-2 min-w-max">
           {products.map((product) => (

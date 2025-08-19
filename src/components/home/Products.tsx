@@ -30,7 +30,7 @@ export default function Products() {
 
   return (
     <div className="flex flex-col gap-2 pt-3 pb-10">
-      <span className="text-2xl font-bold">All Items</span>
+      <span className="text-2xl font-bold px-5">All Items</span>
       {products && products.length > 0 ? (
         <ProductList products={products} />
       ) : (

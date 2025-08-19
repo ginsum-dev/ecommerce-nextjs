@@ -104,7 +104,7 @@ export default function ProductSlider() {
 
   return (
     <div
-      className="relative w-full max-w-6xl mx-auto h-80 rounded-lg sm:h-96 bg-gradient-to-r from-blue-50 to-indigo-50 overflow-hidden cursor-grab active:cursor-grabbing"
+      className="relative w-full max-w-6xl mx-auto h-80 sm:h-96 bg-gradient-to-r from-blue-50 to-indigo-50 overflow-hidden cursor-grab active:cursor-grabbing"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -121,12 +121,12 @@ export default function ProductSlider() {
       </div>
 
       {/* 상품 정보 */}
-      <div className="absolute inset-0 flex items-end justify-end py-10 px-8">
-        <div className="max-w-lg ">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+      <div className="absolute inset-0 flex py-10 px-8">
+        <div className="max-w-lg">
+          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900">
             {currentProduct.title}
           </h2>
-          <p className="text-base sm:text-lg text-white">
+          <p className="text-base sm:text-lg text-zinc-900">
             {currentProduct.description}
           </p>
         </div>

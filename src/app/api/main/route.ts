@@ -2,26 +2,26 @@ import { NextResponse } from "next/server";
 
 const mainProducts = [
   {
-    id: 1,
-    title: "건강한 채소",
-    description: "신선한 채소 세트를 만나보세요!",
-    image:
-      "https://images.unsplash.com/photo-1609842947419-ba4f04d5d60f?q=80&w=2070&auto=format&fit=crop",
-  },
-  // 패션/액세서리
-  {
     id: 6,
-    title: "아침 식사",
-    description: "아침 식사엔 신선한 과일이 최고예요!",
+    title: "복숭아",
+    description: "신선한 제철 복숭아를 만나보세요!",
     image:
-      "https://images.unsplash.com/photo-1467453678174-768ec283a940?q=80&w=1744&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1532704868953-d85f24176d73?q=80&w=1744&auto=format&fit=crop",
   },
+  {
+    id: 1,
+    title: "오렌지",
+    description: "오렌지 세트가 준비되어 있어요.",
+    image:
+      "https://images.unsplash.com/photo-1523971436722-f144a6a5dc60?q=80&w=2070&auto=format&fit=crop",
+  },
+
   {
     id: 7,
-    title: "오렌지",
-    description: "신선한 오렌지 세트",
+    title: "배",
+    description: "신선한 배가 준비되어 있어요.",
     image:
-      "https://images.unsplash.com/photo-1613478223719-2ab802602423?q=80&w=1674&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1667400104714-53da4894bf18?q=80&w=1674&auto=format&fit=crop",
   },
 ];
 

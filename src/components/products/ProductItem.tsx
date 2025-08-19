@@ -20,7 +20,7 @@ export default function ProductItem({ product }: { product: Product }) {
   };
 
   return (
-    <li className="flex flex-col w-full sm:w-[49%] border border-gray-300 rounded-md gap-3 hover:shadow-md transition-shadow">
+    <li className="flex flex-col w-full sm:w-[48.6%] border border-gray-200 rounded-md gap-3 hover:shadow-md transition-shadow">
       <Link href={`/products/${product.id}`} className="block">
         {/* 상품 이미지 */}
         <div className="relative w-full h-60 bg-gray-100 rounded-t-md overflow-hidden">
