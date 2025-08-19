@@ -4,8 +4,10 @@ export interface Product {
   id: number;
   name: string;
   price: number;
+  discountPrice?: number;
   stock: number;
   image: string;
+  description: string;
 }
 
 export const getProducts = async (): Promise<Product[]> => {
@@ -20,12 +22,35 @@ export const getProducts = async (): Promise<Product[]> => {
   }
 };
 
+export const getProductById = async (id: string): Promise<Product> => {
+  try {
+    const response = await fetch(`/api/products/${id}`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch product");
+    }
+    return response.json();
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const useGetProducts = () => {
   return useQuery({
     queryKey: ["products"],
     queryFn: getProducts,
     staleTime: 5 * 60 * 1000, // 5분
     gcTime: 10 * 60 * 1000, // 10분
+    retry: 3,
+  });
+};
+
+export const useGetProductById = (id: string) => {
+  return useQuery({
+    queryKey: ["product", id],
+    queryFn: () => getProductById(id),
+    enabled: !!id,
+    staleTime: 5 * 60 * 1000,
+    gcTime: 10 * 60 * 1000,
     retry: 3,
   });
 };
