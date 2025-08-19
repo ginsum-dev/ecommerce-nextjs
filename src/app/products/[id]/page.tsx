@@ -4,12 +4,16 @@ import Navbar from "@/components/custom/Navbar";
 import Footer from "@/components/custom/Footer";
 
 interface ProductDetailPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ProductDetailPage({ params }: ProductDetailPageProps) {
+export default async function ProductDetailPage({
+  params,
+}: ProductDetailPageProps) {
+  const { id } = await params;
+
   return (
     <div className="relative flex flex-col min-h-screen">
       <Header backPath="/">
@@ -17,7 +21,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
       </Header>
       <Navbar />
       <main className="w-[600px] mx-auto pb-20">
-        <ProductDetail productId={params.id} />
+        <ProductDetail productId={id} />
       </main>
       <Footer />
     </div>
