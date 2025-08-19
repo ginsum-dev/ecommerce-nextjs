@@ -104,7 +104,7 @@ export default function ProductSlider() {
 
   return (
     <div
-      className="relative w-full max-w-6xl mx-auto h-80 sm:h-96 bg-gradient-to-r from-blue-50 to-indigo-50 overflow-hidden cursor-grab active:cursor-grabbing"
+      className="relative w-full max-w-6xl mx-auto h-80 rounded-lg sm:h-96 bg-gradient-to-r from-blue-50 to-indigo-50 overflow-hidden cursor-grab active:cursor-grabbing"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -115,14 +115,14 @@ export default function ProductSlider() {
           src={currentProduct.image}
           alt={currentProduct.title}
           fill
-          className="object-cover opacity-90"
+          className="object-cover opacity-96"
           sizes="100vw"
         />
       </div>
 
       {/* 상품 정보 */}
-      <div className="absolute inset-0 flex items-end justify-end py-10 px-20">
-        <div className="max-w-lg">
+      <div className="absolute inset-0 flex items-end justify-end py-10 px-8">
+        <div className="max-w-lg ">
           <h2 className="text-2xl sm:text-3xl font-bold text-white">
             {currentProduct.title}
           </h2>
@@ -135,7 +135,7 @@ export default function ProductSlider() {
       {/* 네비게이션 버튼 */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 w-7 h-7 bg-white/70 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all"
       >
         <svg
           className="w-5 h-5 text-gray-600"
@@ -154,7 +154,7 @@ export default function ProductSlider() {
 
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 w-7 h-7 bg-white/70 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all"
       >
         <svg
           className="w-5 h-5 text-gray-600"
@@ -179,7 +179,7 @@ export default function ProductSlider() {
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all ${
               index === currentIndex
-                ? "bg-blue-600"
+                ? "bg-orange-400"
                 : "bg-white/60 hover:bg-white/80"
             }`}
           />
@@ -187,7 +187,7 @@ export default function ProductSlider() {
       </div>
 
       {/* 상품 번호 표시 */}
-      <div className="absolute top-6 right-6 bg-black/20 text-white px-4 py-1 rounded-full text-base font-semibold">
+      <div className="absolute top-3 right-3 bg-black/20 text-white px-4 py-1 rounded-full text-xs font-medium">
         {currentIndex + 1} / {products.length}
       </div>
     </div>

@@ -29,8 +29,8 @@ export default function Products() {
   }
 
   return (
-    <div className="flex flex-col gap-4 pt-3 pb-10">
-      <span className="text-2xl font-bold">All</span>
+    <div className="flex flex-col gap-2 pt-3 pb-10">
+      <span className="text-2xl font-bold">All Items</span>
       {products && products.length > 0 ? (
         <ProductList products={products} />
       ) : (

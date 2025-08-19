@@ -4,7 +4,7 @@ import Header from "@/components/custom/Header";
 export default function CartPage() {
   return (
     <div className="flex flex-col gap-4">
-      <Header>
+      <Header backPath="/">
         <h1 className="text-2xl font-bold">Cart</h1>
       </Header>
       <CartList />

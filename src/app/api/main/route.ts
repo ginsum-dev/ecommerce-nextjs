@@ -6,7 +6,7 @@ const mainProducts = [
     title: "건강한 채소",
     description: "신선한 채소 세트를 만나보세요!",
     image:
-      "https://images.unsplash.com/photo-1557844352-761f2565b576?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1609842947419-ba4f04d5d60f?q=80&w=2070&auto=format&fit=crop",
   },
   // 패션/액세서리
   {

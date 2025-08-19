@@ -30,7 +30,7 @@ export default function RootLayout({
       >
         <QueryProvider>
           <div className="flex flex-col w-screen h-screen">
-            <div className="flex flex-col w-full max-w-[768px] mx-auto">
+            <div className="flex flex-col w-full max-w-[600px] mx-auto">
               {children}
             </div>
           </div>

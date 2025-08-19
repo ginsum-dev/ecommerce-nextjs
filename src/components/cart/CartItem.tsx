@@ -29,7 +29,7 @@ export default function CartItem({
         <div className="flex gap-3 items-center">
           <input
             type="checkbox"
-            className="w-4 h-4 accent-orange-300"
+            className="w-4 h-4 accent-blue-500"
             checked={!!checkedItems.find((item) => item.id === id)}
             onChange={() => handleClickCheckbox(cartItem)}
           />

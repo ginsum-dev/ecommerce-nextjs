@@ -12,7 +12,7 @@ export default function Home() {
         <h1 className="text-2xl font-bold">Shop</h1>
       </Header>
       <Navbar />
-      <div className="w-[765px] mx-auto">
+      <div className="w-[600px] mx-auto">
         <ProductSlider />
         <BestItem />
         <Products />

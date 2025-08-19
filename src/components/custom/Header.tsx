@@ -10,7 +10,7 @@ export default function Header({
   backPath?: string;
 }) {
   return (
-    <header className="relative flex justify-center items-center p-4">
+    <header className="relative flex justify-center items-center pt-4">
       {backPath && (
         <div className="absolute left-5">
           <Link href={backPath}>

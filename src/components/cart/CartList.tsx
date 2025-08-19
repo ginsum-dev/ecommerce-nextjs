@@ -26,7 +26,7 @@ export default function CartList() {
               type="checkbox"
               checked={isAllChecked}
               onChange={onClickCheckAll}
-              className="w-4 h-4 accent-orange-300"
+              className="w-4 h-4 accent-blue-500"
             />
             <span className="text-sm text-gray-800">전체 선택</span>
           </div>

@@ -6,6 +6,7 @@ const bestProducts = [
     id: 2,
     name: "사과",
     price: 89000,
+    discountPrice: 79000,
     image:
       "https://images.unsplash.com/photo-1577028300036-aa112c18d109?q=80&w=1035&auto=format&fit=crop",
   },
@@ -13,6 +14,7 @@ const bestProducts = [
     id: 4,
     name: "블루베리",
     price: 45000,
+    discountPrice: 35000,
     image:
       "https://images.unsplash.com/photo-1425934398893-310a009a77f9?q=80&w=2000&auto=format&fit=crop",
   },
@@ -20,6 +22,7 @@ const bestProducts = [
     id: 6,
     name: "딸기",
     price: 35000,
+    discountPrice: 25000,
     image:
       "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?q=80&w=2070&auto=format&fit=crop",
   },
@@ -27,6 +30,7 @@ const bestProducts = [
     id: 8,
     name: "레몬",
     price: 89000,
+    discountPrice: 79000,
     image:
       "https://images.unsplash.com/photo-1624436518795-a2c1c77d6896?q=80&w=1035&auto=format&fit=crop",
   },
@@ -34,6 +38,7 @@ const bestProducts = [
     id: 10,
     name: "토마토",
     price: 120000,
+    discountPrice: 110000,
     image:
       "https://images.unsplash.com/photo-1582284540020-8acbe03f4924?q=80&w=1035&auto=format&fit=crop",
   },
@@ -41,6 +46,7 @@ const bestProducts = [
     id: 12,
     name: "바나나",
     price: 18000,
+    discountPrice: 15000,
     image:
       "https://images.unsplash.com/photo-1543218024-57a70143c369?q=80&w=1035&auto=format&fit=crop",
   },

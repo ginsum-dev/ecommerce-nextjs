@@ -1,5 +1,5 @@
 const variantMap = {
-  primary: "bg-orange-400 text-white font-bold hover:bg-orange-500",
+  primary: "bg-blue-500 text-white font-bold hover:bg-blue-600",
   outline: "border border-gray-300 hover:bg-gray-100",
 };
 
