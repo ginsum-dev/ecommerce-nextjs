@@ -1,36 +1,203 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Fresh Market - Next.js
 
-## Getting Started
+신선한 농산물을 판매하는 컨셉의 온라인 마켓플레이스입니다. Next.js을 활용하여 구축된 상품 리스트와 장바구니 기능을 사용할 수 있는 웹사이트입니다.
 
-First, run the development server:
+## ✨ 주요 기능
+
+### 🏠 홈페이지
+
+- **상품 슬라이더**: 자동 슬라이드와 터치/스와이프 지원
+- **베스트 상품**: 인기 상품들을 가로 스크롤로 표시
+- **상품 목록**: 전체 상품을 그리드 형태로 표시
+
+### 🛍️ 상품 관리
+
+- **상품 목록**: 카테고리별 상품 조회
+- **상품 상세**: 상품 이미지, 가격, 설명 정보
+- **할인 시스템**: 원가와 할인가 표시, 할인율 계산
+
+### 🛒 장바구니
+
+- **상품 추가**: 상품 상세 페이지에서 장바구니 추가
+- **수량 조절**: 장바구니 내 상품 수량 증가/감소
+- **장바구니 목록**: 추가된 상품들의 목록과 총 가격 표시
+
+### 📦 주문 관리
+
+- **주문 내역**: 사용자의 주문 기록 조회
+- **포인트 시스템**: 적립 포인트 관리
+
+## 🛠️ 기술 스택
+
+### Frontend
+
+- **Next.js 15**: React 기반 풀스택 프레임워크
+- **React 19**: 최신 React 버전
+- **TypeScript**: 타입 안정성 보장
+- **Tailwind CSS**: 유틸리티 퍼스트 CSS 프레임워크
+
+### State Management
+
+- **Zustand**: 경량 상태 관리 라이브러리
+- **React Query (TanStack Query)**: 서버 상태 관리
+
+### Development Tools
+
+- **ESLint**: 코드 품질 관리
+- **Turbopack**: 빠른 개발 서버
+
+## 📁 프로젝트 구조
+
+```
+ecommerce-nextjs/
+├── src/
+│   ├── app/                    # Next.js App Router
+│   │   ├── api/               # API 라우트
+│   │   │   ├── products/      # 상품 API
+│   │   │   ├── points/        # 포인트 API
+│   │   │   ├── best/          # 베스트 상품 API
+│   │   │   └── main/          # 메인 슬라이더 API
+│   │   ├── cart/              # 장바구니 페이지
+│   │   ├── order/             # 주문 페이지
+│   │   ├── products/          # 상품 페이지
+│   │   └── page.tsx           # 홈페이지
+│   ├── components/            # React 컴포넌트
+│   │   ├── cart/             # 장바구니 관련 컴포넌트
+│   │   ├── custom/           # 공통 UI 컴포넌트
+│   │   ├── home/             # 홈페이지 컴포넌트
+│   │   ├── order/            # 주문 관련 컴포넌트
+│   │   └── products/         # 상품 관련 컴포넌트
+│   ├── hooks/                # 커스텀 훅
+│   ├── lib/                  # 유틸리티 함수
+│   ├── queries/              # React Query 쿼리
+│   ├── store/                # Zustand 스토어
+│   └── types/                # TypeScript 타입 정의
+├── public/                   # 정적 파일
+└── assets/                   # 이미지 및 아이콘
+```
+
+## 🚀 시작하기
+
+### 필수 요구사항
+
+- Node.js 18.17 이상
+- npm 또는 yarn
+
+### 설치 및 실행
+
+1. **의존성 설치**
+
+```bash
+npm install
+# 또는
+yarn install
+```
+
+2. **개발 서버 실행**
 
 ```bash
 npm run dev
-# or
+# 또는
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **브라우저에서 확인**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 빌드 및 배포
 
-## Learn More
+```bash
+# 프로덕션 빌드
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# 프로덕션 서버 실행
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 주요 페이지
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 홈페이지 (`/`)
 
-## Deploy on Vercel
+- 상품 슬라이더
+- 베스트 상품 섹션
+- 전체 상품 목록
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 상품 목록 (`/products`)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 모든 상품을 그리드 형태로 표시
+- 검색 기능
+- 할인가 표시
+
+### 상품 상세 (`/products/[id]`)
+
+- 상품 이미지 갤러리
+- 상세 정보 및 설명
+- 장바구니 추가 기능
+- 배송 및 반품 정보
+
+### 장바구니 (`/cart`)
+
+- 추가된 상품 목록
+- 수량 조절 기능
+- 총 가격 계산
+
+### 주문 내역 (`/order`)
+
+- 주문 기록 조회
+- 포인트 적립 내역
+
+## 🎨 UI/UX 특징
+
+### 반응형 디자인
+
+- 모바일, 태블릿, 데스크톱 최적화
+- Tailwind CSS를 활용한 유연한 레이아웃
+
+### 사용자 경험
+
+- 로딩 상태 표시
+- 에러 처리 및 사용자 피드백
+- 부드러운 애니메이션과 전환 효과
+
+### 접근성
+
+- 시맨틱 HTML 구조
+- 키보드 네비게이션 지원
+- 적절한 alt 텍스트
+
+## 🔧 API 엔드포인트
+
+### 상품 관련
+
+- `GET /api/products` - 전체 상품 목록
+- `GET /api/products/[id]` - 개별 상품 정보
+- `GET /api/best` - 베스트 상품 목록
+- `GET /api/main` - 메인 슬라이더 데이터
+
+### 포인트 관련
+
+- `GET /api/points` - 포인트 정보
+
+## 🎯 주요 기능 상세
+
+### 상품 슬라이더
+
+- 5초마다 자동 슬라이드
+- 좌우 화살표 버튼으로 수동 제어
+- 터치/스와이프 지원
+- 인디케이터로 현재 위치 표시
+
+### 할인 시스템
+
+- 원가에 취소선 표시
+- 할인가를 빨간색으로 강조
+- 자동 할인율 계산 및 표시
+
+### 장바구니 기능
+
+- 상품별 수량 관리
+- 실시간 가격 계산
+- Zustand를 활용한 상태 관리
